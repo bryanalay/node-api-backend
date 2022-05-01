@@ -70,6 +70,13 @@ const agenda = [
   }
 ]
 
+const login = [
+  {
+    username: 'midudev',
+    password: 'lamidupassword'
+  }
+]
+
 let notes = [
   {
     id: 1,
@@ -95,6 +102,10 @@ let notes = [
 //   response.writeHead(200, { 'Content-Type': 'application/json' })
 //   response.end(JSON.stringify(notes))
 // })
+
+app.get('/api/login', (request, response) => {
+  response.send(login)
+})
 
 app.get('/', (request, response) => {
   response.send('<h1>hello world</h1>')
