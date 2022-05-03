@@ -1,0 +1,7 @@
+PUT http://localhost:3001/api/notes/6270a0f85e99642edbac8ee7
+content-type: application/json
+
+{
+    "content": "actualizando OTRA nota (otra vez)",
+    "important": "true"
+}
