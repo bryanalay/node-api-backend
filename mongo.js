@@ -1,9 +1,12 @@
 const mongoose = require('mongoose')
 
-const conectionString = toString(process.env.MONGO_DB_URI)
+const conectionString = process.env.MONGO_DB_URI
 
-// coneccion a mongodb
-mongoose.connect(conectionString)
+// conexion a mongodb
+mongoose.connect(conectionString, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => {
     console.log('Datebase Connected')
   }).catch(err => {
