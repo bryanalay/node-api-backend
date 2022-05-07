@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const conectionString = process.env.MONGO_DB_URI
+const conectionString = process.env.MONGODB_URI
 
 // conexion a mongodb
 mongoose.connect(conectionString, {
